@@ -28,15 +28,13 @@ public class StartActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
                 pointsGame = getTextPointGame();
                 nameA = getNameAGame();
                 nameB = getNameBGame();
 
                 if (pointsGame.equals("") && nameA.equals("") && nameB.equals("")) {
                     Toast.makeText(StartActivity.this, "Enter text to all fields, please", Toast.LENGTH_LONG).show();
-                }
-                else if (Integer.parseInt(pointsGame) % 100 != 0) {
+                } else if (Integer.parseInt(pointsGame) % 100 != 0) {
                     Toast.makeText(StartActivity.this, "Wrong input of maximum points", Toast.LENGTH_LONG).show();
                 } else {
                     Intent intentMain = new Intent(StartActivity.this, MainActivity.class);
@@ -54,7 +52,6 @@ public class StartActivity extends AppCompatActivity {
         editTeamNameA = findViewById(R.id.nameA);
         editTeamNameB = findViewById(R.id.nameB);
         buttonStartGame = findViewById(R.id.start_game);
-
     }
 
     private String getTextPointGame() {

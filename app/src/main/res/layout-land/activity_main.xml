@@ -5,305 +5,282 @@
     android:layout_height="match_parent"
     android:background="@color/darkRed"
     android:fillViewport="true"
-    android:scrollbars="vertical"
     android:scrollbarStyle="insideInset"
+    android:scrollbars="vertical"
     tools:context="com.example.android.tichucountersecondproject.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/marginBottom10"
-        android:text="@string/name"
-        android:textColor="@color/black"
-        android:textSize="@dimen/size24"
-        android:textStyle="bold"
-        android:layout_marginBottom="@dimen/marginBottom10"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/marginBottom10"
-        android:text="@string/winning_points"
-        android:textColor="@color/black"
-        android:textSize="@dimen/sub16"
-        android:textStyle="bold"
-        />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/marginBottom10"
+            android:layout_marginTop="@dimen/marginBottom10"
+            android:text="@string/name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size24"
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/teamAname"
-            style="@style/textViewStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin30"
-            android:layout_marginStart="@dimen/margin30"
-            android:gravity="center"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/marginBottom10"
+            android:text="@string/winning_points"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sub16"
+            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/teamBName"
-            style="@style/textViewStyle"
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/teamAname"
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="@dimen/margin30"
+                android:layout_marginStart="@dimen/margin30"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/teamBName"
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/margin30"
+                android:layout_marginRight="@dimen/margin30"
+                android:gravity="center" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/pointsA"
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="@dimen/margin40"
+                android:layout_marginStart="@dimen/margin30"
+                android:paddingLeft="@dimen/padding20"
+                android:paddingRight="@dimen/padding20"
+                android:paddingStart="@dimen/padding20"
+                android:text="@string/zero" />
+
+            <TextView
+                android:id="@+id/showMaxPoints"
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/pointsB"
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/margin30"
+                android:layout_marginRight="@dimen/margin40"
+                android:paddingLeft="@dimen/padding20"
+                android:paddingRight="@dimen/padding20"
+                android:paddingStart="@dimen/padding20"
+                android:text="@string/zero" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editPointsA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="4" />
+
+            <EditText
+                android:id="@+id/editPointsB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="4" />
+
+        </LinearLayout>
+
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:gravity="center"
-            android:layout_marginRight="@dimen/margin30"
-            android:layout_marginEnd="@dimen/margin30"
-            android:layout_alignParentEnd="true" />
+            android:layout_margin="@dimen/marginMain">
 
+            <Button
+                android:id="@+id/Grande"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plus200" />
 
-    </RelativeLayout>
+            <TextView
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/Grande" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+            <Button
+                android:id="@+id/Grande1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@id/Grande1"
+                android:layout_toRightOf="@id/Grande1"
+                android:text="@string/plus200" />
 
-        <TextView
-            android:id="@+id/pointsA"
-            style="@style/textViewStyle"
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginMain">
+
+            <Button
+                android:id="@+id/noGrande"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minus200" />
+
+            <TextView
+                android:id="@+id/successfulGrande"
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/noGrande" />
+
+            <Button
+                android:id="@+id/noGrande1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@id/noGrande1"
+                android:layout_toRightOf="@id/noGrande1"
+                android:text="@string/minus200" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin40"
-            android:layout_marginStart="@dimen/margin30"
-            android:layout_alignParentLeft="true"
-            android:paddingLeft="@dimen/padding20"
-            android:paddingRight="@dimen/padding20"
-            android:paddingStart="@dimen/padding20"
-            android:text="@string/zero"
-            android:layout_alignParentStart="true" />
+            android:layout_margin="@dimen/marginMain">
 
-        <TextView
-            android:id="@+id/showMaxPoints"
-            style="@style/textViewStyle"
-            android:layout_width="wrap_content"
+
+            <Button
+                android:id="@+id/tichu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plus100" />
+
+            <TextView
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/Tichu" />
+
+            <Button
+                android:id="@+id/tichu1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@id/tichu1"
+                android:layout_toRightOf="@id/tichu1"
+                android:text="@string/plus100" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            />
+            android:layout_margin="@dimen/marginMain">
 
-        <TextView
-            android:id="@+id/pointsB"
-            style="@style/textViewStyle"
-            android:layout_width="wrap_content"
+
+            <Button
+                android:id="@+id/noTichu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minus100" />
+
+            <TextView
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/noTichu" />
+
+            <Button
+                android:id="@+id/noTichu1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_toEndOf="@id/noTichu1"
+                android:layout_toRightOf="@id/noTichu1"
+                android:text="@string/minus100" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:text="@string/zero"
-            android:layout_alignParentEnd="true"
-            android:paddingLeft="@dimen/padding20"
-            android:paddingRight="@dimen/padding20"
-            android:paddingStart="@dimen/padding20"
-            android:layout_marginRight="@dimen/margin40"
-            android:layout_marginEnd="@dimen/margin30"
-            />
+            android:layout_marginTop="@dimen/marginBottom10">
 
-    </RelativeLayout>
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="149dp"
+                android:layout_marginStart="149dp"
+                android:text="@string/submit" />
 
+            <Button
+                android:id="@+id/reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="131dp"
+                android:layout_marginRight="131dp"
+                android:text="@string/newGame" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/editPointsA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="number"
-            android:gravity="center"
-            android:maxLength="4" />
-
-
-
-        <EditText
-            android:id="@+id/editPointsB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="number"
-            android:gravity="center"
-            android:maxLength="4"
-
-            />
-
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginMain">
-
-
-        <Button
-            android:id="@+id/Grande"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/plus200" />
-
-        <TextView
-
-            style="@style/textViewStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/Grande" />
-
-        <Button
-            android:id="@+id/Grande1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_toEndOf="@id/Grande1"
-            android:layout_toRightOf="@id/Grande1"
-            android:text="@string/plus200" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginMain">
-
-
-        <Button
-            android:id="@+id/noGrande"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/minus200" />
-
-        <TextView
-            android:id="@+id/successfulGrande"
-            style="@style/textViewStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/noGrande" />
-
-        <Button
-            android:id="@+id/noGrande1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_toEndOf="@id/noGrande1"
-            android:layout_toRightOf="@id/noGrande1"
-            android:text="@string/minus200" />
-
-
-    </RelativeLayout>
-
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginMain">
-
-
-        <Button
-            android:id="@+id/tichu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/plus100" />
-
-        <TextView
-
-            style="@style/textViewStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/Tichu" />
-
-        <Button
-            android:id="@+id/tichu1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_toEndOf="@id/tichu1"
-            android:layout_toRightOf="@id/tichu1"
-            android:text="@string/plus100"
-
-            />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginMain">
-
-
-        <Button
-            android:id="@+id/noTichu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/minus100" />
-
-        <TextView
-
-            style="@style/textViewStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:text="@string/noTichu" />
-
-        <Button
-            android:id="@+id/noTichu1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_toEndOf="@id/noTichu1"
-            android:layout_toRightOf="@id/noTichu1"
-            android:text="@string/minus100" />
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/marginBottom10">
-
-        <Button
-            android:id="@+id/submit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="149dp"
-            android:layout_marginStart="149dp"
-            android:text="@string/submit" />
-
-
-        <Button
-            android:id="@+id/reset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="131dp"
-            android:layout_marginRight="131dp"
-            android:text="@string/newGame" />
-
-    </RelativeLayout>
-
+        </RelativeLayout>
 
     </LinearLayout>
 

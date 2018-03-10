@@ -12,7 +12,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 public class MainActivity extends AppCompatActivity {
     private final int TICHU = 100;
     private final int GRANDE = 200;
@@ -52,12 +51,9 @@ public class MainActivity extends AppCompatActivity {
         teamnameB.setText(nameB);
         showMaxPoints.setText(maxPoints);
 
-
-
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (editPointsA.getText().toString().equals("") || editPointsB.getText().toString().equals("")) {
                     Toast.makeText(MainActivity.this, "Enter for both score", Toast.LENGTH_LONG).show();
                 } else {
@@ -87,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                                     .setPositiveButton(R.string.start, new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int which) {
                                             // continue with delete
-                                            Intent startIntent = new Intent(MainActivity.this,StartActivity.class);
+                                            Intent startIntent = new Intent(MainActivity.this, StartActivity.class);
                                             startActivity(startIntent);
                                             finish();
                                         }
@@ -117,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
                                     .setPositiveButton(R.string.start, new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int which) {
                                             // continue with delete
-                                            Intent startIntent = new Intent(MainActivity.this,StartActivity.class);
+                                            Intent startIntent = new Intent(MainActivity.this, StartActivity.class);
                                             startActivity(startIntent);
                                             finish();
                                         }
@@ -138,9 +134,7 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         Toast.makeText(MainActivity.this, "Both numbers must be multiple of 5 and 100\nYou can put till 400 points", Toast.LENGTH_LONG).show();
                     }
-
                 }
-
             }
         });
 
@@ -163,7 +157,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String pointsB = editPointsB.getText().toString();
                 if (pointsB.equals("")) {
-
                     pointsB += String.valueOf(GRANDE);
                     editPointsB.setText(pointsB);
                 } else {
@@ -178,10 +171,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String pointsA = editPointsA.getText().toString();
                 if (pointsA.equals("")) {
-
                     pointsA += String.valueOf(NOGRANDE);
                     editPointsA.setText(pointsA);
-
                 } else {
                     int pointsAA = Integer.parseInt(pointsA) - GRANDE;
                     editPointsA.setText(String.valueOf(pointsAA));
@@ -208,7 +199,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String pointsA = editPointsA.getText().toString();
                 if (pointsA.equals("")) {
-
                     pointsA += String.valueOf(TICHU);
                     editPointsA.setText(pointsA);
                 } else {
@@ -221,10 +211,8 @@ public class MainActivity extends AppCompatActivity {
         tichu1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 String pointsB = editPointsB.getText().toString();
                 if (pointsB.equals("")) {
-
                     pointsB += String.valueOf(TICHU);
                     editPointsB.setText(pointsB);
                 } else {
@@ -240,10 +228,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String pointsA = editPointsA.getText().toString();
                 if (pointsA.equals("")) {
-
                     pointsA += String.valueOf(NOTICHU);
                     editPointsA.setText(pointsA);
-
                 } else {
                     int pointsAA = Integer.parseInt(pointsA) - TICHU;
                     editPointsA.setText(String.valueOf(pointsAA));
@@ -255,7 +241,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String pointsB = editPointsB.getText().toString();
-
                 if (pointsB.equals("")) {
                     pointsB += String.valueOf(NOTICHU);
                     editPointsB.setText(pointsB);
@@ -296,7 +281,6 @@ public class MainActivity extends AppCompatActivity {
         editPointsA = findViewById(R.id.editPointsA);
         editPointsB = findViewById(R.id.editPointsB);
         showMaxPoints = findViewById(R.id.showMaxPoints);
-
     }
 
 
