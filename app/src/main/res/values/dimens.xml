@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sub16">16sp</dimen>
+    <dimen name="marginBottom10">10dp</dimen>
+    <dimen name="size24">24sp</dimen>
+    <dimen name="margin30">30dp</dimen>
+    <dimen name="margin40">40dp</dimen>
+    <dimen name="padding20">20dp</dimen>
+    <dimen name="dp70">70dp</dimen>
+    <dimen name="dp50">50dp</dimen>
+</resources>
