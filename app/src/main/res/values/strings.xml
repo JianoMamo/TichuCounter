@@ -25,4 +25,9 @@
     <string name="messageA">Team A you are the winner!!!</string>
     <string name="startover">Do you wanna start over?</string>
     <string name="messageB">Team B you are the winner!!!</string>
+    <string name="fill_text">Enter text to all fields, please</string>
+    <string name="wrong_input">Wrong input of maximum points</string>
+    <string name="winnerB">Team B won!!  Press Reset for new game</string>
+    <string name="enter_score">Enter for both score</string>
+    <string name="points_warning">Both numbers must be multiple of 5 and 100 You can put till 400 points</string>
 </resources>

@@ -55,12 +55,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (editPointsA.getText().toString().equals("") || editPointsB.getText().toString().equals("")) {
-                    Toast.makeText(MainActivity.this, "Enter for both score", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, R.string.enter_score, Toast.LENGTH_LONG).show();
                 } else {
 
                     int pointsA = Integer.parseInt(editPointsA.getText().toString());
                     int pointsB = Integer.parseInt(editPointsB.getText().toString());
 
+                    //Adding points from EditText to TextViews. Maximum points  we can enter are 400.
+                    //Checking for endgame.
                     if (pointsA <= 400 && pointsB <= 400 && (pointsA + pointsB) % 100 == 0 && pointsA % 5 == 0 && pointsB % 5 == 0) {
                         scoreA += pointsA;
                         scoreB += pointsB;
@@ -101,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                                     .show();
                         }
                         if (scoreB >= Integer.parseInt(maxPoints)) {
-                            Toast.makeText(MainActivity.this, "Team B won!!\n Press Reset for new game", Toast.LENGTH_LONG).show();
+                            Toast.makeText(MainActivity.this, R.string.winnerB, Toast.LENGTH_LONG).show();
                             AlertDialog.Builder builder;
                             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                                 builder = new AlertDialog.Builder(MainActivity.this, android.R.style.Theme_Material_Dialog_Alert);
@@ -132,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                     } else {
-                        Toast.makeText(MainActivity.this, "Both numbers must be multiple of 5 and 100\nYou can put till 400 points", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, R.string.points_warning, Toast.LENGTH_LONG).show();
                     }
                 }
             }

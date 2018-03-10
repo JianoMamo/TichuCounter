@@ -33,9 +33,9 @@ public class StartActivity extends AppCompatActivity {
                 nameB = getNameBGame();
 
                 if (pointsGame.equals("") && nameA.equals("") && nameB.equals("")) {
-                    Toast.makeText(StartActivity.this, "Enter text to all fields, please", Toast.LENGTH_LONG).show();
-                } else if (Integer.parseInt(pointsGame) % 100 != 0) {
-                    Toast.makeText(StartActivity.this, "Wrong input of maximum points", Toast.LENGTH_LONG).show();
+                    Toast.makeText(StartActivity.this, R.string.fill_text, Toast.LENGTH_LONG).show();
+                } else if (Integer.parseInt(pointsGame) % 100 != 0 && Integer.parseInt(pointsGame) == 0) {
+                    Toast.makeText(StartActivity.this, R.string.wrong_input, Toast.LENGTH_LONG).show();
                 } else {
                     Intent intentMain = new Intent(StartActivity.this, MainActivity.class);
                     intentMain.putExtra("points", pointsGame);
@@ -47,7 +47,7 @@ public class StartActivity extends AppCompatActivity {
         });
     }
 
-    public void setup() {
+    private void setup() {
         editPointGame = findViewById(R.id.pointGame);
         editTeamNameA = findViewById(R.id.nameA);
         editTeamNameB = findViewById(R.id.nameB);
