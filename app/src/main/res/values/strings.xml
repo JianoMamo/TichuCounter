@@ -16,14 +16,14 @@
     <string name="doublePoints"> Double Points </string>
     <string name="newGame"> Reset </string>
     <string name="pointsgame">Enter the maximum points of the game</string>
-    <string name="teamAname">Insert team\'s A name</string>
-    <string name="teamBname">Insert team\'s B name</string>
+    <string name="teamAname">Insert Team\'s A name</string>
+    <string name="teamBname">Insert Team\'s B name</string>
     <string name="start_game">Start Game</string>
     <string name="winning_points">Winning Points</string>
     <string name="exit">Exit</string>
     <string name="start">Start</string>
     <string name="messageA">Team A you are the winner!!!</string>
-    <string name="startover">Do you wanna start over?</string>
+    <string name="startover">Do you want to start over?</string>
     <string name="messageB">Team B you are the winner!!!</string>
     <string name="fill_text">Enter text to all fields, please</string>
     <string name="wrong_input">Wrong input of maximum points</string>

@@ -99,30 +99,35 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginLeft="@dimen/margin40"
+        android:layout_marginStart="@dimen/margin30"
+        android:paddingLeft="@dimen/padding20"
+        android:paddingRight="@dimen/dp50"
+        android:paddingStart="@dimen/padding20"
+        android:paddingEnd="@dimen/dp50">
 
         <EditText
             android:id="@+id/editPointsA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
+            android:layout_alignParentStart="true"
             android:inputType="number"
-            android:maxLength="4" />
+            android:maxLength="4"
+            android:layout_alignParentLeft="true" />
 
         <EditText
             android:id="@+id/editPointsB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
+            android:layout_alignParentEnd="true"
             android:inputType="number"
-            android:maxLength="4" />
+            android:maxLength="4"
+            android:layout_alignParentRight="true" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
